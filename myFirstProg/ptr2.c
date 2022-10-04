@@ -3,7 +3,7 @@
 #include <string.h>
 
 #define MAX_LEN 20
-
+ss
 
 int main()
 {
@@ -12,8 +12,8 @@ int main()
     unsigned char* msgPtr = 
         (unsigned char *)malloc(MAX_LEN*sizeof(unsigned char));
     
-    memset(msgPtr,'\0',sizeof(unsigned char)*MAX_LEN);
-    strcpy(msgPtr,message);
+    //memset(msgPtr,'\0',sizeof(unsigned char)*MAX_LEN);
+    strcat(message,msgPtr);
     
     printf("message is \"%s\" (%ld/%ld)\n",
            message,sizeof(message),strlen(message));
@@ -24,5 +24,8 @@ int main()
         printf("%c -- %d\n",msgPtr[index],msgPtr[index]);
     }
     
+    
+    free(msgPtr);
     return 0;
 }
+
