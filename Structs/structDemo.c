@@ -41,9 +41,10 @@ int main(int argc, char** argv)
     
     recCursor = (RecType*)recPtr;
     for(int i=0; i < NUM_OF_RECS; i++,recCursor++){
-        printf("first: %s\nlast: %s\nID: %d\nBalance: $%.2f\n",         recCursor->first_name,recCursor->last_name, recCursor->id, recCursor->balance);
+        printf("first: %s\nlast: %s\nID: %d\nBalance: $%.2f\n",         recCursor[i].first_name,recCursor->last_name, recCursor->id, recCursor->balance);
     }
     
+    free(recPtr);
     return 0;
 }
 

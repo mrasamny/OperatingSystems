@@ -8,6 +8,7 @@ int main()
 {
     pid_t pid;
     int n;
+    int status;
 
     /* fork a child process */
     pid = fork();
@@ -21,8 +22,9 @@ int main()
     }
     else { /* parent process */
         /* parent will wait for the child to complete */
-        wait(NULL);
-        printf("Child Complete\n");
+        //scanf("%d",&n);
+        //pid = wait(&status);
+        printf("Child Completed with status %d\n",status);
     }
 
     return 0;
