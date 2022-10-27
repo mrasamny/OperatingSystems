@@ -12,7 +12,7 @@ pthread_t tid; /* the thread identifier */
 pthread_attr_t attr; /* set of attributes for the thread */
 
 if (argc != 2) {
-	fprintf(stderr,"usage: a.out <integer value>\n");
+	fprintf(stderr,"usage: %s <integer value>\n", argv[0]);
 	/*exit(1);*/
 	return -1;
 }
