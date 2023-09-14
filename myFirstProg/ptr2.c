@@ -3,7 +3,6 @@
 #include <string.h>
 
 #define MAX_LEN 20
-ss
 
 int main()
 {
@@ -13,17 +12,16 @@ int main()
         (unsigned char *)malloc(MAX_LEN*sizeof(unsigned char));
     
     //memset(msgPtr,'\0',sizeof(unsigned char)*MAX_LEN);
-    strcat(message,msgPtr);
+    strcat(message, msgPtr);
     
     printf("message is \"%s\" (%ld/%ld)\n",
-           message,sizeof(message),strlen(message));
+           message, sizeof(message),strlen(message));
     printf("msgPtr is \"%s\" (%ld/%ld)\n",
-           msgPtr,sizeof(unsigned char)*MAX_LEN,strlen(msgPtr));
+           msgPtr, sizeof(unsigned char)*MAX_LEN, strlen(msgPtr));
     
     for(int index=0; index < MAX_LEN && msgPtr[index] != '\0'; index++){
         printf("%c -- %d\n",msgPtr[index],msgPtr[index]);
     }
-    
     
     free(msgPtr);
     return 0;
